@@ -1,0 +1,110 @@
+<% content_for :header_style do %>
+	<link href='https://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,700,300,900' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<link rel="stylesheet" type="text/css" href="https://rawgit.com/aehlke/tag-it/master/css/jquery.tagit.css">
+	<script src="https://rawgit.com/aehlke/tag-it/master/js/tag-it.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/create_event.css">
+
+<% end %>
+
+
+<header>
+  <div class="logo">
+    EventHook
+  </div>
+  <nav role='navigation'>
+    <ul>
+      <li><a href="#">Find</a></li>
+      <li class='selected'><a href="#">Create</a></li>
+      <li><a href="#">Echos</a></li>
+      <li><a href="#">Faqs</a></li>
+    </ul>
+  </nav>
+  <ul class="profile">
+    <li><a href="#">Timeline</a></li>
+    <li><a href="#">Muhammad Umer</a></li>
+  </ul>
+</header>
+
+<div class="cont row">
+  <div class="left eight columns">
+    <h4>Create Event</h4>
+    <form>
+
+      <div class="columns">
+        <label for="title">Title</label>
+        <input class="u-full-width" type="text" placeholder="Football at the beach" id="title">
+      </div>
+
+      <label for="desc">Describe Event</label>
+      <textarea class="u-full-width" placeholder="Details …" id="desc"></textarea>
+
+
+      <h5>Event Options</h5>
+      <div class="row">
+        <div class='six columns'>
+          <label for="exampleEmailInput">Where</label>
+          <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+        </div>
+        <div class='six columns'>
+          <label for="exampleEmailInput">Date</label>
+          <input class="u-full-width" type="date" placeholder="test@mailbox.com" id="exampleEmailInput">
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class='six columns'>
+          <label for="exampleEmailInput">Start Time</label>
+          <input class="u-full-width" type="time" placeholder="test@mailbox.com" id="exampleEmailInput">
+        </div>
+
+        <div class='six columns'>
+          <label for="exampleEmailInput">End Time</label>
+          <input class="u-full-width" type="time" placeholder="test@mailbox.com" id="exampleEmailInput">
+        </div>
+
+
+      </div>
+
+      <div class="row">
+        <label class="six columns">
+          <input type="checkbox">
+          <span class="label-body">Notify Followers</span>
+        </label>
+
+        <label class="six columns">
+          <input type="checkbox">
+          <span class="label-body">Auto Accept</span>
+        </label>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <label>Total People can come
+            <input type="number" class='u-full-width' />
+          </label>
+        </div>
+        <div class="six columns">
+          <label>You / Your Group Size
+            <input type="number" class='u-full-width' />
+          </label>
+        </div>
+      </div>
+      <input class="button-primary" type="submit" value="Submit">
+
+      <div class="row">
+        <label>Tags</label>
+        <ul id="myTags" class="tagit ui-widget ui-widget-content ui-corner-all">
+        </ul>
+      </div>
+    </form>
+  </div>
+  <div class="right four columns">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ducimus recusandae rerum debitis alias ipsa voluptatum nesciunt voluptatem sint ab culpa dicta nulla numquam nobis ad, voluptatibus ratione cupiditate fuga.
+  </div>
+
+</div>

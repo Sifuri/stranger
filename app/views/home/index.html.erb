@@ -1,0 +1,106 @@
+<% content_for :header_style do %>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+<% end %>
+
+<header>
+  <div class="logo animated fadeInDown"><i class="fa fa-paper-plane icon"></i>Stranger</div>
+  <div class="description">Lets Go Together</div>
+  <i class="down-arrow fa fa-angle-down"></i>
+  <div class="color_overlay" style='display:none'></div>
+</header>
+<div class="cont main">
+  <div class="nav">
+    <div class="logo_nav">Stranger</div>
+    <ul>
+      <li><a href="events">Browse</a></li>
+      <li><a href="events/create">Create</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </div>
+  <div class="center">
+
+  </div>
+</div>
+<div class="cont last">
+  <div class="center">
+  </div>
+</div>
+
+<script>
+  
+
+  (function(){
+  var nav = $('.nav'),
+      ny, wy;
+  var cnav = nav.clone();
+  cnav.addClass("fixed").hide();
+  
+  $('body').append(cnav);
+  $(window).scroll(function(){
+    ny = nav.offset().top;
+    wy = $(this).scrollTop();
+    console.log(wy,ny);
+    if (wy>ny) {
+      cnav.show();
+    } else {
+      cnav.hide();
+    }
+  });
+  
+})();
+/*
+$('body').scrollTop($('.cont').first().offset().top);*/
+
+(function() {
+
+  var header = $('header');
+  $(window).scroll(function(e) {
+    scrollHide(header);
+  });
+
+  function scrollHide(ele) {
+    var eleTop = ele.offset().left,
+      eleH = ele.height(),
+      vH = innerHeight,
+      wScroll = $(window).scrollTop();
+
+    if (wScroll < eleH) {
+      ele.find('.color_overlay').show();
+      ele.find('.color_overlay')
+        .css('opacity', Math.min((wScroll / eleH), .8));
+      var b = eleH * (wScroll / eleH);
+      ele.css('top', b);
+    }
+    if (wScroll < 10) {
+      ele.find('.color_overlay').hide();
+    }
+
+  }
+
+  //scrolls itself
+  $('body').bind('mousewheel DOMMouseScroll', function(e) {
+    var scrollTo = null;
+
+    if (e.type == 'mousewheel') {
+      scrollTo = (e.originalEvent.wheelDelta * -1);
+    } else if (e.type == 'DOMMouseScroll') {
+      scrollTo = 40 * e.originalEvent.detail;
+    }
+
+    if (scrollTo) {
+      e.preventDefault();
+      $(this).scrollTop(scrollTo + $(this).scrollTop());
+    }
+  });
+
+  //scroll to first div on click on down arrow
+  $('.down-arrow').click(function() {
+    $('body').animate({
+      scrollTop: $('.cont').first().offset().top
+    }, 600);
+  });
+
+})();
+
+
+</script>

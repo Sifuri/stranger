@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+input[type='date'],
+input[type='time'] {
+  padding: 9px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+header {
+  min-width: 900px;
+  border-bottom: 1px solid #ddd;
+  overflow: auto;
+}
+header .logo {
+  float: left;
+  padding: 20px;
+}
+header nav {
+  float: left;
+  overflow: auto;
+}
+header ul {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+header li {
+  float: left;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+header li.selected a {
+  color: #49C5AB;
+  font-weight: 500;
+}
+header li a {
+  padding: 20px;
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #555;
+  font-weight: 300;
+}
+header .profile {
+  float: right;
+}
+header .profile li a {
+  padding: 20px;
+  font-weight: 300;
+}
+.cont {
+  max-width: 1100px;
+  min-height: 100px;
+  /*background-color: #efefef;*/
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 40px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+#myTags li {
+  margin-top: 7px;
+}

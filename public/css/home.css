@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  float: left;
+  min-width: 100%;
+  font-size: 16px;
+}
+header {
+  position: relative;
+  overflow: auto;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1441716844725-09cedc13a4e7?fit=crop&fm=jpg&h=775&q=80&w=1450);
+}
+.logo {
+  color: #fff;
+  font-family: Lato ;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 12px 15px 12px 8px;
+  border: 2px solid #fff;
+  width: 190px;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+  border-bottom: 7px solid;
+}
+.description {
+  text-align: center;
+  font-family: Lato;
+  color: #fff;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.down-arrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: -10px;
+  width: 58px;
+  line-height: 58px;
+  height: 58px;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1000px;
+}
+.color_overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+}
+.cont {
+  overflow: auto;
+  min-width: 1000px;
+  position: relative;
+  background-color: #fff;
+}
+.center {
+  width: 1000px;
+  margin: auto;
+}
+.cont.main .center {
+  border: 1px solid #ddd;
+  border-top: none;
+  min-height: calc(100vh + 100px);
+  /* margin-bottom: 100px; */
+}
+.cont.last {
+  background-color: #1D2629;
+}
+.cont.last .center {
+  min-height: 300px;
+}
+
+.nav {
+  background-color: #222;
+  font-family: Lato;
+  overflow: auto;
+  color: #fff;
+}
+.logo_nav {
+  display: inline-block;
+}
+.nav ul, .nav li {
+  display: inline-block;
+  font-weight: 300;
+}
+.logo_nav {
+  padding: 16px;
+}
+.logo .icon {
+  margin: 15px;
+}
+.nav li a {
+  border: 1px solid #222;
+  padding: 11px;
+  margin: 5px;
+  text-decoration: none;
+  color: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.nav li a:hover {
+  border: 1px solid #fff;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
